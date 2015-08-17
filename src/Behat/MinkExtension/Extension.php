@@ -370,6 +370,12 @@ class Extension implements ExtensionInterface
                                         end()->
                                     end()->
                                 end()->
+                                arrayNode('browserstack')
+                                    ->children()
+                                        ->booleanNode('local')->defaultValue(false)->end()
+                                        ->booleanNode('debug')->defaultValue(false)->end()
+                                    ->end()
+                                ->end()->
                             end()->
                         end()->
                         scalarNode('wd_host')->
